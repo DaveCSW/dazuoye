@@ -1,5 +1,5 @@
 import json
-import urllib.request,urllib.parse
+import urllib.request, urllib.parse
 import os
 
 f = open('sample.json', encoding='utf-8')
