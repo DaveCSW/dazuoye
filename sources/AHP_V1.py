@@ -2,12 +2,16 @@ import numpy as np
 
 
 def yxgx_to_mhyz(yxgx):
+    # 参数：优先关系矩阵
+    # 返回值：模糊一致矩阵
+
     n = yxgx.shape[0]
     row_sums = yxgx.sum(axis=1)
 
     mhyz = np.zeros((n, n), dtype=np.float64)
     for i in range(n):
         for j in range(n):
+            # 下面这行由相关定理得到
             mhyz[i, j] = (row_sums[i] - row_sums[j]) / (2 * n) + 0.5
 
     return mhyz
