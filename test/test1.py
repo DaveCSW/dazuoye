@@ -8,6 +8,9 @@ data = json.loads(res)
 #print(data)
 cases = data['48117']['cases']
 #print(cases)
+countcase=0
+allupload=0
+allscore=0
 for case in cases:
     uploads = case['upload_records']
     countupload=0
@@ -17,3 +20,7 @@ for case in cases:
     f = open('../result/user1a.txt', mode='a+')
 # 输出数据到文件
     f.write(case["case_id"]+' '+case["case_type"]+' '+str(case["final_score"])+' '+str(countupload)+ '\n')
+    countcase+=1
+    allupload+=countupload
+    allscore+=case["final_score"]
+f.write(''+str(countcase)+' '+str(allupload)+' '+str(allscore/countcase)+' '+str(allupload/countcase))

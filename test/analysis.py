@@ -77,7 +77,7 @@ f.write(count_note(store))  # write 写入
 f.write(count_for(store))
 f.write(count_if(store))
 f.write(count_while(store))
-f.write(check_others(store) + '\n', )
+f.write(check_others(store))
 # writelines()函数 会将列表中的字符串写入文件中，但不会自动换行，如果需要换行，手动添加换行
 # #参数 必须是一个只存放字符串的列表
 f.close()  # 关闭文件
