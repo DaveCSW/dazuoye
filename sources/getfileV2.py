@@ -4,7 +4,7 @@ import os
 import shutil
 # 下载代码
 file='data.zip'
-dir='G:\sourcedownload'
+dir='../samplecode'
 
 
 #获得目录下所有文件的文件名的数组
@@ -63,15 +63,15 @@ def un_zip(file_name):
                 sub_zip_file.extract(subnames)
                 break
         #加入到某个文件夹中 zip_file.extract(names,file_name.split(".")[0])list():
-        os.chdir("G:\\sourcedownload\dio")
+        os.chdir("../samplecode")
 
         #重命名 get_filelist（paht）中的path是转移.mooctest文件下的answer.py的目的地址
-        Filelist = get_filelist("G:\\sourcedownload\dio")
+        Filelist = get_filelist("../samplecode")
         str1 = "answer" + str(len(Filelist)) + ".py"
         os.rename("answer.py", str1)
 
         #转移.mooctest文件下的answer.py到dio文件夹中
-        shutil.move("G:\sourcedownload\.mooctest\\" + "answer.py", "G:\\sourcedownload\dio")
+        shutil.move("../samplecode/.mooctest\\" + "answer.py", "../samplecode")
 
     zip_file.close()
 
