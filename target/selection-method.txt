@@ -1,0 +1,2 @@
+Lnet/mooctest/CMDTest net.mooctest.CMDTest.test()V
+Lnet/mooctest/CMDTest3 net.mooctest.CMDTest3.testnnull()V
